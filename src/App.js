@@ -9,6 +9,8 @@ import About from "./Components/About";
 const App = () => {
   return (
     <BrowserRouter>
+            <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
