@@ -19,13 +19,13 @@ const App = (props) => {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header cart={cart} />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop addProductHandler={addProductHandler} />} />
         <Route path="/shop/:id" element={<ProductDetail addProductHandler={addProductHandler} />} />
-        <Route path="/shop/checkout" element={<Checkout/>} />
+        <Route path="/shop/checkout" element={<Checkout cart={cart} />} /> 
 
         <Route path="/about" element={<About />} />
       </Routes>

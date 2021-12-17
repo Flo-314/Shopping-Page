@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 const ProductDetail = (props) => {
   const [product, setProduct] = useState([]);
   const productId = useParams();
-console.log(props)
   useEffect(() => {
     const fechApi = async () => {
       try {
