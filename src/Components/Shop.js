@@ -19,7 +19,7 @@ const Shop = (props) => {
   }, []);
 
   return (
-    <main id="shop" onClick={() => console.log(products)}>
+    <main id="shop" >
       <div id="product-container">
         {products !== undefined &&
           products.map((product) => {
