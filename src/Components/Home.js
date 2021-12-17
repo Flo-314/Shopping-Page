@@ -1,28 +1,11 @@
-const   Home = () =>  {
-    return (  
-<h1>Home
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
+const Home = () => {
+  return (
+    <main className="home">
+      <h1>Home</h1>
 
-</h1>
-    );
-}
 
-export default  Home;
+    </main>
+  );
+};
+
+export default Home;

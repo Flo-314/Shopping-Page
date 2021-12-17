@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import ProductDetail from "./Components/shopComponents/productDetail";
 import Shop from "./Components/shopComponents/Shop";
 import About from "./Components/About";
-import Checkout from "./Components/shopComponents/checkout";
+import Checkout from "./Components/shopComponents/checkout/checkout" 
 import "./index.css";
 import { useState } from "react";
 

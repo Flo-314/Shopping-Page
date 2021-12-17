@@ -56,7 +56,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
- .card {
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,13 +65,13 @@ a {
   height: 275px;
   background-color: white;
 }
- .card img {
+.card img {
   width: 200px;
   height: 200px;
   padding: 25px;
 }
 
- .card .infoContainer {
+.card .infoContainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -90,11 +90,10 @@ a {
   transition: all 0.1s;
 }
 
-.infoContainer button:hover{
+.infoContainer button:hover {
   background-color: #ff5101;
   transform: scale(1.01);
   transition: all 0.1s;
-
 }
 .infoContainer .title {
   margin-top: 25px;
@@ -106,47 +105,103 @@ a {
   margin-top: 15px;
 }
 
-#singleProduct{
+#singleProduct {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #eee;
 }
-#singleProduct .card{
+#singleProduct .card {
   width: 100vh;
   height: 50vh;
   border: 3px solid black;
 }
-#singleProduct .card img{
+#singleProduct .card img {
   width: 35vh;
   height: 40vh;
 }
 
-#singleProduct .card .infoContainer{
+#singleProduct .card .infoContainer {
   border: 3px solid black;
 
   display: flex;
-  justify-content:start;
+  justify-content: start;
 }
-#singleProduct .title{
+#singleProduct .title {
   font-size: 28px;
   margin-left: 15px;
 }
-#singleProduct .price{
+#singleProduct .price {
   margin-left: 15px;
   margin-top: 35px;
   font-size: 26px;
 }
-#singleProduct .description{
+#singleProduct .description {
   margin: 25px;
   margin-left: 15px;
   font-size: 24px;
   font-weight: 400;
 }
-#singleProduct .addBtn{
+#singleProduct .addBtn {
   margin: 25px;
   margin-left: 50px;
   margin-right: 50px;
   height: 8%;
-  
+}
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutContainer .title {
+  font-size: 22px;
+}
+
+.checkoutContainer .price {
+  color: #4576bc;
+}
+
+.checkoutProduct {
+  margin: 15px;
+  border: 1px solid black;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.checkout button {
+  height: 40px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 18px;
+  background-color: #fd611a;
+  transition: all 0.1s;
+}
+
+.checkout button:hover {
+  background-color: #fb570b;
+  transform: scale(1.02);
+  transition: all 0.1s;
+}
+.checkout {
+  width: 10vh;
+  min-height: 40vh;
+}
+main {
+  background-color: rgb(235, 232, 232);
+}
+
+.home {
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+  color: white;
+}
+.about {
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+  color: white;
 }

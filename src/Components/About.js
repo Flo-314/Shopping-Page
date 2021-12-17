@@ -1,30 +1,11 @@
 const   About = () =>  {
-    return (  
-<div>About
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-<div>About</div>
-
-</div>
-
-    );
-}
+    return (
+        <main className="about">
+          <h1>about</h1>
+    
+    
+        </main>
+      );
+    };
 
 export default  About;
