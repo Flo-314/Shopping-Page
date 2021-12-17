@@ -5,7 +5,7 @@
   margin: 0px;
   padding: 0px;
   border: 0px;
-  word-break:normal;
+  word-break: normal;
   font-family: Rubik;
 }
 
@@ -46,18 +46,17 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
-#shop{
+#shop {
   background-color: #eee;
 }
 
-#shop #product-container{
-
+#shop #product-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-#shop #product-container .card {
+ .card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,41 +64,89 @@ a {
   width: 550px;
   height: 275px;
   background-color: white;
-
 }
-#shop #product-container .card img{
+ .card img {
   width: 200px;
   height: 200px;
   padding: 25px;
 }
 
-
-#shop #product-container .card .infoContainer{
+ .card .infoContainer {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-.infoContainer button{
-position: absolute;
+.infoContainer button {
+  position: absolute;
   height: 40px;
   border-radius: 15px;
   bottom: 0;
   margin-bottom: 15px;
   width: 90%;
   font-size: 18px;
-
-
   background-color: #fd611a;
+  transition: all 0.1s;
+}
+
+.infoContainer button:hover{
+  background-color: #ff5101;
+  transform: scale(1.01);
+  transition: all 0.1s;
+
 }
 .infoContainer .title {
-margin-top: 25px;
-font-size: 24px;
-
+  margin-top: 25px;
+  font-size: 24px;
 }
-.infoContainer .price{
+.infoContainer .price {
   color: #4576bc;
   font-size: 20px;
   margin-top: 15px;
+}
+
+#singleProduct{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+#singleProduct .card{
+  width: 100vh;
+  height: 50vh;
+  border: 3px solid black;
+}
+#singleProduct .card img{
+  width: 35vh;
+  height: 40vh;
+}
+
+#singleProduct .card .infoContainer{
+  border: 3px solid black;
+
+  display: flex;
+  justify-content:start;
+}
+#singleProduct .title{
+  font-size: 28px;
+  margin-left: 15px;
+}
+#singleProduct .price{
+  margin-left: 15px;
+  margin-top: 35px;
+  font-size: 26px;
+}
+#singleProduct .description{
+  margin: 25px;
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+#singleProduct .addBtn{
+  margin: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 8%;
+  
 }

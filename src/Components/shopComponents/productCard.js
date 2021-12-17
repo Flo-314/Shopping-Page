@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
 
-function ProductCard({ product }) {
+function ProductCard(props) {
+  console.log(props)
   return (
     <div className="card">
       <div className="imageContainer">
-        <img alt="product" src={product.image}></img>
+        <Link to={`/shop/${props.product.id}`}>
+          <img alt="product" src={props.product.image}></img>
+        </Link>
       </div>
 
       <div className="infoContainer">
-        {" "}
-        <h3 className="title">{product.title}</h3>
-        <h4 className="price">Price: {product.price}$</h4>
+        <Link to={`/shop/${props.product.id}`}>
+          <h3 className="title">{props.product.title}</h3>
+        </Link>
+        <h4 className="price">Price: {props.product.price}$</h4>
         <button className="addBtn">Add to the Cart</button>
       </div>
     </div>
