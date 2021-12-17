@@ -6,6 +6,7 @@ import ProductDetail from "./Components/shopComponents/productDetail";
 import Shop from "./Components/shopComponents/Shop";
 import About from "./Components/About";
 import Checkout from "./Components/shopComponents/checkout/checkout" 
+import Footer from "./Components/footer";
 import "./index.css";
 import { useState } from "react";
 
@@ -26,9 +27,10 @@ const App = (props) => {
         <Route path="/shop" element={<Shop addProductHandler={addProductHandler} />} />
         <Route path="/shop/:id" element={<ProductDetail addProductHandler={addProductHandler} />} />
         <Route path="/shop/checkout" element={<Checkout cart={cart} />} /> 
-
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 };

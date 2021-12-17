@@ -9,6 +9,9 @@
   font-family: Rubik;
 }
 
+button{
+  cursor: pointer;  
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -204,4 +207,27 @@ main {
   height: 90vh;
   background-color: black;
   color: white;
+}
+
+
+footer{
+  background-color: #F8F9FA;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img{
+  width: 50px;
+  height: 50px;
+  transition: 0.1s all;
+  margin: 25px;
+}
+
+footer img:hover{
+  transform: scale(1.2);
+  transform: rotate(360);
+  transition: 0.1s all; 
 }
