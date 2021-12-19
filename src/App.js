@@ -31,9 +31,7 @@ const deleteProduct = (product) => {
     const productIndex = findProductIndex(product);
     let newCart = cart;
     newCart[productIndex].quantity += 1;
-    console.log(newCart)
-    console.log("----------")
-    console.log(cart)
+
     setCart(newCart);
   };
   const substractProduct = (product) => {
