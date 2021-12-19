@@ -22,7 +22,7 @@ const Shop = (props) => {
       <div id="product-container">
         {products !== undefined &&
           products.map((product) => {
-            return <ProductCard product={product} key={uniqid()} addProductHandler={props.addProductHandler} />;
+            return <ProductCard product={product} key={uniqid()} ProductHandler={props.ProductHandler} />;
           })}
       </div>
     </main>

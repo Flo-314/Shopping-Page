@@ -1,9 +1,9 @@
 import CheckoutCard from "./checkoutCard";
 import uniqid from "uniqid";
-const Checkout = ({ cart }) => {
+const Checkout = (props) => {
   const getTotalCost = () => {
     let finalPrice = 0;
-    cart.forEach((product) => {
+    props.cart.forEach((product) => {
       finalPrice += product.price;
     });
     return finalPrice;
@@ -14,8 +14,8 @@ const Checkout = ({ cart }) => {
       <div >
         <h1>Checkout: </h1>
         <div className="productsToPay">
-          {cart.map((product) => {
-            return <CheckoutCard product={product} key={uniqid()} />;
+          {props.cart.map((product) => {
+            return <CheckoutCard product={product} substractProduct={props.substractProduct} deleteProduct={props.deleteProduct} addProduct={props.addProduct} key={uniqid()} />;
           })}
         </div>
         <div className="checkout">

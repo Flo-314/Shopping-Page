@@ -14,7 +14,7 @@ function ProductCard(props) {
           <h3 className="title">{props.product.title}</h3>
         </Link>
         <h4 className="price">Price: {props.product.price}$</h4>
-        <button className="addBtn" onClick={() => props.addProductHandler(props.product)}>Add to the Cart</button>
+        <button className="addBtn" onClick={() => props.ProductHandler(props.product)}>Add to the Cart</button>
       </div>
     </div>
   );

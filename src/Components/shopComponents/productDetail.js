@@ -28,7 +28,7 @@ const ProductDetail = (props) => {
           <h3 className="title">{product.title}</h3>
           <h4 className="price">Price: {product.price}$</h4>
           <h4 className="description">{product.description}</h4>
-          <button className="addBtn" onClick={() => props.addProductHandler(product)}>Add to the Cart</button>
+          <button className="addBtn" onClick={() => props.ProductHandler(product)}>Add to the Cart</button>
         </div>
       </div>
     </main>
