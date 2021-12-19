@@ -14,7 +14,17 @@ const App = (props) => {
   const [cart, setCart] = useState([])
  
   const addProductHandler = (product) => {
-    setCart((cart) => [...cart, product]);
+    const productIndex = cart.findIndex((e => e.id === product.id))
+    if(productIndex === -1){
+      product.quantity = 1
+      setCart((cart) => [...cart, product]);
+    }
+else{
+  let newCart = cart
+  newCart[productIndex].quantity += 1
+  setCart(newCart);
+
+} 
     console.log(cart)
   }
 
