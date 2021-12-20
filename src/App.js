@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Nav from "./Components/Nav"
 import Header from "./Components/header";
 import Home from "./Components/Home";
 import ProductDetail from "./Components/shopComponents/productDetail";
@@ -21,29 +21,27 @@ const App = (props) => {
     product.quantity = 1;
     setCart((cart) => [...cart, product]);
   };
-const deleteProduct = (product) => { 
-  setCart(cart.filter(Cartproduct => Cartproduct.id !== product.id));
-
-}
+  const deleteProduct = (product) => {
+    setCart(cart.filter((Cartproduct) => Cartproduct.id !== product.id));
+  };
 
   const addProduct = (product) => {
-    
     const productIndex = findProductIndex(product);
-    let newCart = cart;
+    let newCart = [...cart];
     newCart[productIndex].quantity += 1;
 
     setCart(newCart);
   };
   const substractProduct = (product) => {
     const productIndex = findProductIndex(product);
-    let newCart = cart;
+    let newCart = [...cart];
     newCart[productIndex].quantity -= 1;
     setCart(newCart);
-   }
+  };
 
   const ProductHandler = (product) => {
     if (findProductIndex(product) === -1) {
-      createNewProduct(product)
+      createNewProduct(product);
     } else {
       addProduct(product);
     }
@@ -52,7 +50,7 @@ const deleteProduct = (product) => {
   return (
     <BrowserRouter>
       <Header cart={cart} />
-
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -63,7 +61,17 @@ const deleteProduct = (product) => {
           path="/shop/:id"
           element={<ProductDetail ProductHandler={ProductHandler} />}
         />
-        <Route path="/shop/checkout" element={<Checkout cart={cart} substractProduct={substractProduct}  addProduct={addProduct} deleteProduct={deleteProduct}/>} />
+        <Route
+          path="/shop/checkout"
+          element={
+            <Checkout
+              cart={cart}
+              substractProduct={substractProduct}
+              addProduct={addProduct}
+              deleteProduct={deleteProduct}
+            />
+          }
+        />
         <Route path="/about" element={<About />} />
       </Routes>
 

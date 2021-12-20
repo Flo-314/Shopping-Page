@@ -4,9 +4,9 @@ const Checkout = (props) => {
   const getTotalCost = () => {
     let finalPrice = 0;
     props.cart.forEach((product) => {
-      finalPrice += product.price;
+      finalPrice += product.price*product.quantity;
     });
-    return finalPrice;
+    return finalPrice.toFixed(2);;
   };
 
   return (
@@ -20,7 +20,7 @@ const Checkout = (props) => {
         </div>
         <div className="checkout">
           <h3>Total: {getTotalCost()}$</h3>
-          <button>Payout</button>
+          <button onClick={ () => prompt("¿What are you expecting?")}>Payout</button>
         </div>
       </div>
     </main>

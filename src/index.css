@@ -16,23 +16,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #adb5bd;
+  background-color: white;
   width: 100%;
   height: 120px;
 }
-header #title,
-nav {
+header #title {
   margin-left: 50px;
   margin-right: 50px;
 }
 
+nav{
+  background-color: #fd611a;
+  width: 100%;
+  
+}
 nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
-nav li {
+nav li, header li {
   text-decoration: none;
   margin: 35px;
   list-style: none;
@@ -112,7 +116,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
+  background-color: white;
 }
 #singleProduct .card {
   width: 100vh;
@@ -166,13 +170,7 @@ a {
   color: #4576bc;
 }
 
-.checkoutProduct {
-  margin: 15px;
-  border: 1px solid black;
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+
 .checkout button {
   height: 40px;
   border-radius: 15px;
@@ -193,20 +191,24 @@ a {
   min-height: 40vh;
 }
 main {
-  background-color: rgb(235, 232, 232);
+  background-color: white;
 }
 
 .home {
   width: 100%;
   height: 90vh;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 .about {
   width: 100%;
   height: 90vh;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+}
+
+.about *, .home * {
+  margin: 40px;
 }
 
 
@@ -230,4 +232,33 @@ footer img:hover{
   transform: scale(1.2);
   transform: rotate(360);
   transition: 0.1s all; 
+}
+.checkoutProduct{ 
+display: flex;
+justify-content: center;
+flex-direction: column;
+border: 1px solid black;
+margin-top: 30px;
+margin-bottom: 15px;
+box-shadow: 2px 2px 2px 1px black;
+}
+
+.checkoutProduct * {
+  margin-top: 10px;
+}
+.checkoutProduct button{
+  min-height: 30px;
+  border-radius: 15px;
+  margin: 0;
+  margin-top: 30px;
+margin-bottom: 5px;
+font-size: 17px;
+}
+.checkoutProduct h4{
+  font-weight: 400;
+}
+.quantity button{
+  width: 40px;
+  height: 25px;
+  font-size: 18px;
 }

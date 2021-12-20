@@ -1,4 +1,5 @@
-import Nav from "./Nav";
+import { Link } from "react-router-dom";
+
 const   Header = ({cart}) =>  {
     return (  
         <header>
@@ -6,7 +7,10 @@ const   Header = ({cart}) =>  {
             <div id="title">
                 <h1>NK8 Shop</h1>
             </div>
-            <Nav cart={cart}/>
+            <li >
+          <Link to="shop/checkout">Checkout({cart.length})</Link>
+          
+        </li>
         </header>
     );
 }

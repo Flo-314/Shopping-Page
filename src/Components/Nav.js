@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Nav = ({cart}) => {
+const Nav = () => {
   return (
     <nav>
       <ul>
@@ -13,10 +13,6 @@ const Nav = ({cart}) => {
         <li>
           <Link to="about">About</Link>
 
-        </li>
-        <li >
-          <Link to="shop/checkout">Checkout({cart.length})</Link>
-          
         </li>
       </ul>
     </nav>
