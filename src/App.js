@@ -36,7 +36,10 @@ const App = (props) => {
     const productIndex = findProductIndex(product);
     let newCart = [...cart];
     newCart[productIndex].quantity -= 1;
-    setCart(newCart);
+    if(newCart[productIndex].quantity < 0){
+     newCart = deleteProduct(product)
+    }
+   else{ setCart(newCart)}
   };
 
   const ProductHandler = (product) => {
